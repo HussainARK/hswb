@@ -1,11 +1,5 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'hswb.ui'
-#
-# Created by: PyQt5 UI code generator 5.14.2
-#
-# WARNING! All changes made in this file will be lost!
-
 # I've imported QtWebEngineWidgets
 from PyQt5 import QtCore, QtGui, QtWidgets, QtWebEngineWidgets
 
@@ -30,6 +24,9 @@ class Ui_MainWindow(object):
     This is a Simple Web Browser created by H.A.R.K.
 
     and, HSWB stands for "H.A.R.K. Simple Web Browser"
+
+    My Website: https://hussainark.github.io
+    Short Link: https://bit.ly/hark-official
     ''')
 
     # End of my Section
@@ -103,6 +100,7 @@ class Ui_MainWindow(object):
         self.go_button.clicked.connect(self.load)
         self.url_bar.returnPressed.connect(self.load)
         self.action_about.triggered.connect(self.open_help)
+        self.action_exit.triggered.connect(MainWindow.close)
         self.view = QtWebEngineWidgets.QWebEngineView(MainWindow)
         self.view.setUrl(QtCore.QUrl('https://hussainark.github.io'))
         self.view.setGeometry(0, 80, 1200, 700)
@@ -131,12 +129,5 @@ if __name__ == "__main__":
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
     ui.setupUi(MainWindow)
-
-    # My Section
-
-    ui.action_exit.triggered.connect(MainWindow.close)
-
-    # End of My Section
-
     MainWindow.show()
     sys.exit(app.exec_())

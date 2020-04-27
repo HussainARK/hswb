@@ -1,6 +1,5 @@
 build.cmd
 dist.cmd
-hswb.ico
 hswb.spec
 utils.py
 
