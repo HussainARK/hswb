@@ -1,0 +1,11 @@
+build.cmd
+dist.cmd
+hswb.ico
+hswb.spec
+utils.py
+
+.pyc
+
+dist/
+build/
+__pycache__/
